@@ -6,16 +6,21 @@ html{
 * {
 	box-sizing: border-box;
 }
-p,h1,h2,h3,h4,h4,h6,div,span {
-	font-family:PingFangSC-Regular,sans-serif,Microsoft JhengHei;	
 
+/*  文字連結 */
+@font-face {
+	font-family: FakePearl-Regular; src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2")
+  , url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
 }
 
 p {
-	font-size: 16px;
+	font-size: 18px;
 }
 
-
+.img-fluid {
+	width:100;
+	height:auto;
+}
 
 
 
@@ -41,6 +46,8 @@ p {
 
 
 
+
+
 /* 三色便當*/
 
 .container {
@@ -52,35 +59,63 @@ p {
 
 /* 三色便當標題*/
 .text{
+
 	padding-top:110px;
 	padding-bottom: 47px;
 	text-align:center
+	;
+}
+
+
+
+/* 食譜中間的線*/
+
+ .link-top {
+            width: 100%;
+            height: 1px;
+            margin:auto;
+           margin-top: 20px;
+            margin-bottom: 20px;
+            border-top: solid  #C29634 3px;
+
+        }
+
+
+mark.green {
+
+margin: 2em 0px;
+padding: 1em 1.5em;
+	border-bottom: 10px solid #FDE199;
+	background: none;
+	border-radius: .9em 2em .8em 0em/.9em 2em .8em 3em;
 	
+   color:#C29634;
 }
 
 .container img {
 padding:0!important;
 display:block;
-margin:0px auto ;
+margin:0 auto ;
 
-max-width:750px;
-myimg:expression(onload=function(){
-this.style.width=(this.offsetWidth > 600)?"600px":"auto"});
+
 
 }
+ .caption h5{ padding-top: 15px;
 
+ }
 
 .caption
 {padding:30px;
 max-width: 850px;
-margin-left:145px;
-
-
+margin:0 auto;
+font-size: 18px;
 
 }
 
 .content figcaption
 {   padding:30px;
+	font-size: 18px;
+
 	}
 
 
@@ -136,10 +171,6 @@ margin-left:145px;
 
 }
 
-.leftbox {
-border: 2px solid blue;
-	
-}
 
 
 
@@ -202,6 +233,8 @@ border: 2px solid blue;
     -webkit-transition-timing-function: ease-in-out;
     -moz-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
+    color:black;
+
 }
 
 
@@ -280,22 +313,14 @@ padding-top: 10px}
 
 
 
-/*footer*/
-footer {
-	background-color: #c1adad;
-	padding:20px 0; 
-}
 
-footer p {
-	line-height: 39px;
-}
 
 @media (min-width: 768px) {
 /*nav選單*/
 	.navbar{
 	padding-left:50px!important;
 	padding-right:50px!important; 
-	background-color:red ;
+
 
 }
 }
